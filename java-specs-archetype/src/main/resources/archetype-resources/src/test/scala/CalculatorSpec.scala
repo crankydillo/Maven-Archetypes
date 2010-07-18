@@ -25,5 +25,11 @@ object CalculatorSpec extends Specification {
       history must haveSize(2)
       history must containInOrder(List("2 + 2", "1 + 1"))
     }
+
+    "throw an IllegalArgumentException if either Integer argument is null" in {
+      calculator.add(null, 1) must throwA[IllegalArgumentException]
+      calculator.add(1, null) must throwA[IllegalArgumentException]
+      calculator.add(null, null) must throwA[IllegalArgumentException]
+    }
   }
 }
