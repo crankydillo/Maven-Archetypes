@@ -71,7 +71,7 @@
             <classpath/>
             <!-- SpecsRunner runs all the *Spec.class -->
             <argument>${package}.SpecsRunner</argument>
-            <!--<argument>${groupId}.CalculatorSpec</argument>-->
+            <!--<argument>${package}.CalculatorSpec</argument>-->
           </arguments>
         </configuration>
       </plugin>
