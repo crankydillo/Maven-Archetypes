@@ -1,4 +1,4 @@
-package ${groupId}
+package ${package}
 
 import org.specs._
 import org.specs.runner.JUnit4
