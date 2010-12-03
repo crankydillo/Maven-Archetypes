@@ -1,5 +1,8 @@
 <archetype-descriptor name="basic">
   <fileSets>
+    <fileSet filtered="true" packaged="false">
+      <directory>project</directory>
+    </fileSet>
     <fileSet filtered="true" packaged="true">
       <directory>src/main/scala</directory>
       <includes>
