@@ -44,6 +44,22 @@ class Tools(info: ProjectInfo) extends DefaultProject(info) {
     }
   }
 
+  lazy val mkSpec = task {args =>
+    task {
+      if (args.size != 2)
+        println("Specify spec name (without the \"Spec\") and package name")
+      else {
+        val spec = args(0);
+        val pkg = args(1);
+        val lst = pkg.split("\\.");
+        val specDir = mkDirs(List("src", "test", "scala") ++ lst)
+        mkSpecFn(spec + "Spec", pkg, specDir)
+      }
+      None
+    }
+  }
+
+
   lazy val mkScalaAndSpec = task {args =>
     task {
       if (args.size < 2)
